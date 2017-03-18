@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Draznilka function</h1>
+    <script>
+        function pickRandomWord (words){
+            return words[Math.floor(Math.random() * words.length)];
+        }
+
+        function generateRandomInsult (){
+            var bodyParts = ['Нос','Рука','Череп','Зубы','Уши','Хвост','Шерсть','Мозги','Ноготь'];
+            var adjectives = ['хмурая','нудная','вонючая','глупая','кривая','шизанутая'];
+            var someWords =['дубина','макака','тетрадка','лавочка','гитара','тумба','лес','лампа','ваза'];
+            var  randomString ='У тебя ' + pickRandomWord(bodyParts) + ' точ в точ, как у ' +pickRandomWord(adjectives) + ' ' + pickRandomWord(someWords) ;
+            document.write(randomString);
+            return randomString;
+        }
+        generateRandomInsult();
+    </script>
+</body>
+</html>

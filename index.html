@@ -33,15 +33,22 @@
             result = 'У тебя ' + bodyPart + ' словно ' + adjective + ' ' + someWord;
             document.write(result);
         </script>
-        <h1>Дразнилка (tease)2 функция</h1>
-        <script>
-            function generateRandomInsult (){
-                var bodyParts = ['Нос','Рука','Череп','Зубы','Уши','Хвост','Шерсть','Мозги','Ноготь'];
-                var adjectives = ['хмурая','нудная','вонючая','глупая','кривая','шизанутая'];
-                var someWords =['дубина','макака','тетрадка','лавочка','гитара','тумба','лес','лампа','ваза'];
-                var  randomString ='';
-            }
-        </script>
+        <h1>Дразнилка 2, в виде функии</h1>
+    <script>
+        function pickRandomWord (words){
+            return words[Math.floor(Math.random() * words.length)];
+        }
+
+        function generateRandomInsult (){
+            var bodyParts = ['Нос','Рука','Череп','Зубы','Уши','Хвост','Шерсть','Мозги','Ноготь'];
+            var adjectives = ['хмурая','нудная','вонючая','глупая','кривая','шизанутая'];
+            var someWords =['дубина','макака','тетрадка','лавочка','гитара','тумба','лес','лампа','ваза'];
+            var  randomString ='У тебя ' + pickRandomWord(bodyParts) + ' точ в точ, как у ' +pickRandomWord(adjectives) + ' ' + pickRandomWord(someWords) ;
+            document.write(randomString);
+            return randomString;
+        }
+        generateRandomInsult();
+    </script>
         <h1> Цикл FOR очень крут</h1>
         <script>
             var animals=['Cat','fish','lemur','Komodo dragon'];
